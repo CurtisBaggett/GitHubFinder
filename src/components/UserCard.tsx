@@ -5,7 +5,7 @@ import {
   followGithubUser,
   unfollowGithubUser,
 } from "../api/github";
-import { FaGithubAlt, FaUserMinus, FaUserPlus } from "react-icons/fa";
+import { FaGithubAlt } from "react-icons/fa";
 import type { GitHubUser } from "../types";
 
 const UserCard = ({ user }: { user: GitHubUser }) => {
@@ -40,13 +40,13 @@ const UserCard = ({ user }: { user: GitHubUser }) => {
     },
   });
 
-  const handleFollow = () => {
-    if (isFollowing) {
-      unfollowMutation.mutate();
-    } else {
-      followMutation.mutate();
-    }
-  };
+  // const handleFollow = () => {
+  //   if (isFollowing) {
+  //     unfollowMutation.mutate();
+  //   } else {
+  //     followMutation.mutate();
+  //   }
+  // };
 
   return (
     <div className="user-card">
